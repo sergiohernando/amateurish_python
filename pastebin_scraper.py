@@ -61,8 +61,8 @@ for element in json_content:
 	file.write("Syntax: " + working_dictionary[syntax] + "\n")
 	file.write("Size: " + working_dictionary[size] + "\n")
 	file.write("===============================================================" + "\n")
-	r2 = requests.get(working_dictionary[scrape_url])
-	file.write("Content: " + "\n\n" + r2.text + "\n\n")
+	r1 = requests.get(working_dictionary[scrape_url])
+	file.write("Content: " + "\n\n" + r1.text + "\n\n")
 
 file.close()
 
