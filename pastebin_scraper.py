@@ -6,7 +6,7 @@ import time
 
 # SOME VARIABLES
 
-api_dev_key = 'your_dev_goes_here'
+api_dev_key = 'your_dev_key_goes_here'
 api_user_name = 'your_user_goes_here'
 api_user_password = 'your_password_goes_here'
 login_url = 'https://pastebin.com/api/api_login.php'
