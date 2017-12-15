@@ -42,11 +42,8 @@ user = 'user'
 #SOME BEAUTIFUL SOUP TO EXTRACT THE TAGS OF THE TRENDING POST REQUEST
 
 file = open("pastebinoutput.txt", "w", encoding='UTF8')
-
 soup = BeautifulSoup(trending_pastebins, 'html.parser')
-
 find_tag = soup.findAll('paste')
-
 trending_dictionary = {}
 
 for elementos in find_tag:
@@ -61,12 +58,7 @@ for elementos in find_tag:
 	trending_paste_format_short = elementos.paste_format_short.contents
 	trending_paste_url = elementos.paste_url.contents
 	trending_paste_hits = elementos.paste_hits.contents
-	print(trending_paste_key)
-
 	trending_dictionary.update({'paste_key': trending_paste_key, 'paste_date': trending_paste_date, 'paste_title': trending_paste_title, 'paste_size': trending_paste_size, 'paste_expire_date': trending_paste_expire_date, 'paste_private': trending_paste_private, 'paste_format_long': trending_paste_format_long, 'paste_format_short': trending_paste_format_short, 'paste_url': trending_paste_url, 'paste_hits': trending_paste_hits})
-
-	print (trending_dictionary)
-
 	file.write("===============================================================" + "\n")
 	file.write("Trending element: " + str(trending_dictionary['paste_key']) + "\n")
 	file.write("Date: " + str(trending_dictionary['paste_date']) + "\n" + "Hits: " + str(trending_dictionary['paste_hits']) + "\n"+ "URL: " + str(trending_dictionary['paste_url']) + "\n\n")
